@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Nginx静态服务器",
+        "name": "nginx",
+        "image": "nginx:stable-perl",
+        "version": "0.0.1",
+        "description": "Nginx 静态服务器，展示你的静态文件",
+        "website": "https://www.nginx.com/",
+        "tags": ["服务器", "NAS"],
+        "cmds": [
+            "-p",
+            "{port}:80",
+            "-v",
+            "{path}:/usr/share/nginx/html",
+            "nginx:stable-perl"
+        ],
+        "values": {
+            "{port}": {
+                "description": "默认端口",
+                "value": "8080",
+                "format": "number"
+            },
+            "{path}": {
+                "description": "映射路径",
+                "value": "",
+                "format": "path"
+            }
+        }
+    }
+]
