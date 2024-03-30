@@ -26,5 +26,44 @@
                 "format": "path"
             }
         }
+    },
+    {
+        "title":"gallery-dl媒体下载",
+        "name": "gallerydl",
+        "website": "https://github.com/mikf/gallery-dl",
+        "tags": [
+            "下载"
+        ],
+        "image":"mikf123/gallery-dl",
+        "description": "从多个站点下载图像库和集合,例如 twitter, instagram, patreon",
+        "version": "0.0.1",
+        "cmds": [
+            "-v",
+            "{path}:/gallery-dl/",
+            "-v",
+            "{config}:/etc/gallery-dl.conf",
+            "-i",
+            "mikf123/gallery-dl:latest",
+            "{url}"
+        ],
+        "values": {
+            "{path}": {
+                "description": "存储目录",
+                "value": "",
+                "placeholder":"保存下载的数据目录",
+                "format": "path"
+            },
+            "{config}": {
+                "description": "配置文件",
+                "value": "",
+                "placeholder":"要加载的配置文件",
+                "format": "path"
+            },
+            "{url}": {
+                "description": "URL",
+                "placeholder":"要下载的目标URL",
+                "value": ""
+            }
+        }
     }
 ]
